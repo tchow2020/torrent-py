@@ -1,4 +1,7 @@
 from pytube import YouTube
-yt = YouTube('https://youtu.be/jC0kHsTtzCA')
-yt.streams.first().download()
-yt = yt('mp4', '480p')
+from pytube.cli import on_progress
+
+
+YouTube('https://youtu.be/7aBtZUSBwoQ').streams.get_highest_resolution().download()
+yt = YouTube('https://youtu.be/7aBtZUSBwoQ')
+yt.streams
